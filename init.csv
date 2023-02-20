@@ -1,0 +1,12 @@
+tables_connections,parent,text,parent_column,text,child,text,child_column,text
+objects,kadstr_num,text,type1_object,integer,type2_object,integer,type3_object,integer,area,real,entrance,integer,floor,text,actual,integer
+type1_object,type_object,text
+type2_object,type_object,text
+type3_object,type_object,text
+holders,object,integer,holder,integer,registration,integer,membertsg,integer,surname,text,name,text,patronymic,text,bithday,text,inn,text,phone_num,text,email,text,num_kad_zapisi,text,ratio,real,actual,integer
+holder,type,text
+registration,type,text
+membertsg,type,text
+logbook,object,integer,date_log,text,num_log_act,text,comment,text,file_act,text
+petitionbook,petitor,integer,date_petition,text,type_petiton,integer,petition,text,file_petition,text
+type_petition,type_petition,text

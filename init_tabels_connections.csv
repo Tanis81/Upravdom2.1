@@ -1,0 +1,10 @@
+type1_object,ID,objects,type1_object
+type2_object,ID,objects,type2_object
+type3_object,ID,objects,type3_object
+objects,ID,holders,object
+holder,ID,holders,holder
+registration,ID,holders,registration
+membertsg,ID,holders,membertsg
+objects,ID,logbook,object
+holders,ID,petitionbook,petitor
+type_petition,ID,petitionbook,type_petiton
