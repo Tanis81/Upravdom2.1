@@ -10,7 +10,6 @@ class BaseManager:
 
     @classmethod
     def set_connection(cls, database_settings):
-        print(database_settings)
         connection = sqlite3.connect(database_settings)
         connection.isolation_level = None
         cls.connection = connection
@@ -119,6 +118,8 @@ path = Path(pathlib.Path.cwd(), connected_db)
 
 DB_SETTINGS = path
 BaseManager.set_connection(database_settings=DB_SETTINGS)
+
+
 class Objects(BaseModel):
     manager_class = BaseManager
     table_name = "objects"
@@ -128,6 +129,5 @@ class Type1_object(BaseModel):
     table_name = 'type1_object'
 
 
-# SQL: SELECT first_name, last_name, salary, grade FROM employees;
 type1_obj = Type1_object.objects.select('type_object')
 print(f"First select result:\n {type1_obj} \n")
