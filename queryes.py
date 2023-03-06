@@ -11,7 +11,7 @@ class BaseManager:
     @classmethod
     def set_connection(cls, database_settings):
         connection = sqlite3.connect(database_settings)
-        connection.isolation_level = None
+        connection.isolation_level = None #автоматическая запись операций в базу (без commit())
         cls.connection = connection
     @classmethod
     def _get_cursor(cls):
