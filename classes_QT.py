@@ -13,7 +13,7 @@ class BaseManager():
     @classmethod
     def set_connection(cls, database_settings):
         connection = QSqlDatabase.addDatabase(database_settings.driver)
-        connection.setDatabaseName(database_settings.file.as_posix())
+        connection.setDatabaseName(database_settings.file.as_posix()) #PyQT не воспринимает путь к файлу тип Windows, поэтому передаче подлежит путь as_posix() (метод класса Path)
         cls.connection = connection
     @classmethod
     def _get_cursor(cls):
